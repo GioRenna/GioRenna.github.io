@@ -23,6 +23,7 @@ body, html {background: #000; color:#fff; font-family: 'Intro', sans-serif;}
 .title{
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    font-size: 1.5cm;
     height: 5%;
     display: flex;
     justify-content:center;
@@ -53,6 +54,7 @@ body, html {background: #000; color:#fff; font-family: 'Intro', sans-serif;}
 .panel .panel-title {
     height: 15%;
     font-weight: 600;
+    font-size: 1.7cm;
 }
 
 .section.in-page .title{
@@ -117,6 +119,8 @@ input[type=radio] {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
   
   #item-1:checked ~ .cards #cocktail-3, #item-2:checked ~ .cards #cocktail-1, #item-3:checked ~ .cards #cocktail-2 {
