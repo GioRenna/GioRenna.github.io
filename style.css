@@ -83,7 +83,7 @@ input[type=radio] {
     display: none;
 }
   
-  .cocktail-card {
+  .card {
     position: absolute;
     width: 60%;
     height: 100%;
@@ -99,7 +99,6 @@ input[type=radio] {
     position: absolute;
     border: 10px solid rgb(204, 0, 255);
     width: 60%;
-    max-width: 800px;
     max-height: 600px;
     height: 45vh;
     transform-style: preserve-3d;
@@ -144,6 +143,25 @@ input[type=radio] {
     z-index: 1;
   } 
   
+
+  /*FOOD*/
+  #food-1:checked ~ .cards #food-card-3, #food-2:checked ~ .cards #food-card-1, #food-3:checked ~ .cards #food-card-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #food-1:checked ~ .cards #food-card-2, #food-2:checked ~ .cards #food-card-3, #food-3:checked ~ .cards #food-card-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #food-1:checked ~ .cards #food-card-1, #food-2:checked ~ .cards #food-card-2, #food-3:checked ~ .cards #food-card-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  } 
 
   @media (min-width: 200px) and (orientation:landscape) {
     .container {
