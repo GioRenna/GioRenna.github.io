@@ -384,7 +384,6 @@ input[type=radio] {
 
     @media (max-width: 768px) {
       .panel{
-        width: 106%;
         height: 110vh;
       }
       .title{
@@ -442,9 +441,13 @@ input[type=radio] {
       }
 
       .map-img {
-        height: 70%;
-        width: 90%;
+        height: 50%;
+        width: 80%;
         margin-top: 50%;
-        border-radius: 50px;
+        margin-left: -4%;
+      }
+
+      #final-section{
+        height: 80vh;
       }
     }
