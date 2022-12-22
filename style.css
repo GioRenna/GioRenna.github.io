@@ -95,10 +95,10 @@ a{ text-decoration: none; }
 }
 
 .panel-container {
-  border: 1pt solid red;
+  height: 100vh;
   width: 100%;
   max-width: 1000px;
-  padding: 4%;
+  padding: 4% 4% 0 4%;
   text-align:left;
 }
 
@@ -125,6 +125,60 @@ a{ text-decoration: none; }
 .fade-in.in-page {
   opacity: 1;
   transform: translateY(0vh);
+}
+
+.img-big-left{
+  object-fit: none;
+  border-radius: 0px;
+  box-shadow: none;
+  object-fit: none;
+  padding-top: 0;
+  display: block;
+}
+
+.img-big-left-guys {
+  box-shadow: none;
+  object-fit: none;
+  padding-top: 0;
+  display: block;
+  width: 50%;
+  height: 60%;
+}
+
+.panel-title-med{
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+footer{
+  height: 10vh;
+  background: #000;
+  position: relative;
+  z-index: 3;
+}
+
+.map-img{
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  left: 10%;
+  right: 0;
+  margin-top: 30%;
+  object-fit: none;
+  box-shadow: none;
+}
+
+.final-container {
+  height: 20vh;
+  width: 100%;
+  max-width: 1000px;
+  padding: 4% 4% 0 4%;
+  text-align:left;
 }
 
 .section.in-page .title{
@@ -330,6 +384,13 @@ input[type=radio] {
   }
 
     @media (max-width: 768px) {
+      .panel{
+        width: 106%;
+        height: 110vh;
+      }
+      .title{
+        font-size: 1cm;
+      }
       .header__menu{
         position: absolute;
         top: 45px;
@@ -374,5 +435,17 @@ input[type=radio] {
       }
       .panel .panel-title {
         font-size: 1.2cm;
+      }
+
+      .img-big-left-guys {
+        width: 90%;
+        height: 60%;
+      }
+
+      .map-img {
+        height: 70%;
+        width: 90%;
+        margin-top: 50%;
+        border-radius: 50px;
       }
     }

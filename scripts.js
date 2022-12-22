@@ -13,7 +13,7 @@ var callback = function(items) {
 }
 
 // observer
-var observer = new IntersectionObserver(callback, {threshold: 0.7});
+var observer = new IntersectionObserver(callback, {threshold: 0.55});
 
 // apply
 elements_to_watch.forEach((element) => {observer.observe(element);});
