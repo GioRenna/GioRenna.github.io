@@ -412,6 +412,8 @@ input[type=radio] {
         width: 100%;
         border-bottom: 1px solid #444;
         padding-left: 0;
+        margin-left: -7%;
+        display: block;
       }
 
       .menu-open .header__menu{
