@@ -4,7 +4,6 @@ a{ text-decoration: none; }
 
 .header{
   background-color: rgb(17, 17, 17);
-  border: 1px solid red;
   position: fixed;
   top: 0;
   left: 0;
