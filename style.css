@@ -52,17 +52,18 @@ a{ text-decoration: none; }
 }
 
 #logo{
-    max-width: 720px;
-    max-height: 720px;
+    max-width: 360px;
+    max-height: 360px;
     height: 10%;
-    display: flex;
+    display: relative;
     justify-content:center;
     text-align: center;
-    width: 50%;
+    width: 100%;
     position: fixed;
     top: 25%;
     left: 0;
-    margin-left: 25%;
+    right: 0;
+    margin: auto;
     transform: scale(1);
     transition: all 1s cubic-bezier(.215, .61, .355, 1);
     opacity: 0;
@@ -293,6 +294,7 @@ footer{
   height: 50px;
   top: 60%;
   margin-left: 43.5%;
+  margin-top: 12%;
 }
 
 @keyframes glowing {
@@ -367,7 +369,98 @@ input[type=radio] {
     z-index: 1;
   } 
   
+  /*New Carousel css*/
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: Arial;
+    position: relative;
+    z-index: 2;
+  }
 
+
+  .carousel__list {
+      display: flex;
+      list-style: none;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      justify-content: center;
+      perspective: 300px;
+  }
+    
+  .carousel__itemfood {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0px;
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+      position: absolute;
+      transition: all .3s ease-in;
+      object-fit: cover;
+  }
+      
+  .carousel__itemfood:nth-child(1) {
+    background-image: url(images/cocktails_card.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+      }
+
+  .carousel__itemfood:nth-child(2) {
+        background: linear-gradient(45deg, #2D35EB 0%, #fdbb2d 100%);
+      }
+  .carousel__itemfood:nth-child(3) {
+        background: linear-gradient(45deg, #2D35EB 0%, #22c1c3 100%);
+      }
+  .carousel__itemfood:nth-child(4) {
+        background: linear-gradient(45deg, #fdbb2d 0%, #904ED4 100%);
+      }
+  .carousel__itemfood:nth-child(5) {
+        background: linear-gradient(45deg, #22c1c3 0%, #904ED4 100%);
+      }
+      
+  .carousel__itemfood[data-pos="0"] {
+        z-index: 5;
+      }
+      
+  .carousel__itemfood[data-pos="-1"],
+  .carousel__itemfood[data-pos="1"] {
+        opacity: 0.7;
+        filter: blur(1px) grayscale(10%);
+      }
+      
+  .carousel__itemfood[data-pos="-1"] {
+        transform: translateX(-40%) scale(.9);
+        z-index: 4;
+      }
+      
+  .carousel__itemfood[data-pos="1"] {
+        transform: translateX(40%) scale(.9);
+        z-index: 4;
+      }
+      
+  .carousel__itemfood[data-pos="-2"],
+  .carousel__itemfood[data-pos="2"] {
+        opacity: 0.4;
+        filter: blur(3px) grayscale(20%);
+      }
+      
+  .carousel__itemfood[data-pos="-2"] {
+        transform: translateX(-70%) scale(.8);
+        z-index: 3;
+      }
+      
+  .carousel__itemfood[data-pos="2"] {
+        transform: translateX(70%) scale(.8);
+        z-index: 3;
+      }
+  
   /*FOOD*/
   #food-1:checked ~ .cards #food-card-3, #food-2:checked ~ .cards #food-card-1, #food-3:checked ~ .cards #food-card-2 {
     transform: translatex(-40%) scale(.8);
