@@ -1,9 +1,9 @@
 /*Reset*/
-body, html {background: #000; color:#fff; font-family: 'Intro', sans-serif;}
+body, html {background-image: url(images/background_no_logo.jpg); background-color: #294a51; color:#fff; font-family: brandon-grotesque, sans-serif; font-style: normal; font-weight: 100;}
 a{ text-decoration: none; }
 
 .header{
-  background-color: rgb(17, 17, 17);
+  background-color: #ce9d4a;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,17 +44,6 @@ a{ text-decoration: none; }
   width: 50px;
 }
 
-.video-background{
-    width: 100vh;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    opacity: 0.5;
-    z-index: 0;
-}
-
 .section{
     position: relative;
     z-index: 1;
@@ -62,9 +51,27 @@ a{ text-decoration: none; }
     height: 100vh;
 }
 
+#logo{
+    max-width: 720px;
+    max-height: 720px;
+    height: 10%;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    margin-left: 25%;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    opacity: 0;
+}
+
 .title{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
+    color: #fff9eb;
+    font-family: brandon-grotesque;
+    font-weight: bold;
     font-size: 1.5cm;
     height: 5%;
     display: flex;
@@ -85,8 +92,8 @@ a{ text-decoration: none; }
     font-weight: 200;
     height: 100vh;
     width: 100%;
-    background: #f7f7f7;
-    color:#000;
+    background: #fff9eb;
+    color:#ce9d4a;
     position: relative;
     z-index: 2;
     text-align:left;
@@ -156,7 +163,7 @@ a{ text-decoration: none; }
 
 footer{
   height: 10vh;
-  background: #000;
+  background: #fff9eb;
   position: relative;
   z-index: 3;
 }
@@ -185,9 +192,19 @@ footer{
     opacity: 1;
 }
 
+.section.in-page #logo{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
 .scroll-section .title{
     margin-top: 0;
     vertical-align: top;
+}
+
+.scroll-section #logo{
+  margin-top: 0;
+  vertical-align: top;
 }
 
 /*First section*/
@@ -197,13 +214,19 @@ footer{
     font-weight: 400;
 }
 
+.section.scroll-section.centered #logo{
+  height: 50%;
+  align-items: center;
+  font-weight: 400;
+}
+
 /* RADIO BUTTON*/
 .glow-on-hover {
   vertical-align: top;
   border: none;
   outline: none;
-  color: #fff;
-  background: #111;
+  color: #fff9eb;
+  background: #ce9d4a;
   cursor: pointer;
   position: fixed;
   z-index: 2;
@@ -224,7 +247,7 @@ footer{
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg, #fff9eb, #eebe6c,#cea359,#ce9d4a);
   position: fixed;
   top: -2px;
   left:-2px;
@@ -240,7 +263,7 @@ footer{
 }
 
 .glow-on-hover:active {
-  color: #000
+  color: #ce9d4a;
 }
 
 .glow-on-hover:active:after {
@@ -257,7 +280,7 @@ footer{
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: #ce9d4a;
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -429,7 +452,7 @@ input[type=radio] {
       .icon-hamburger span{
         height: 2px;
         width: 30px;
-        background: #fff;
+        background: #fff9eb;
         position: relative;
         display: block;
         margin-top: 10px;
