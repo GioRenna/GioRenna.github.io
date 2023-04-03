@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/first_section.css">
+    <link rel="stylesheet" href="style/carousels.css">
+    <link rel="stylesheet" href="style/panels.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;800&display=swap" rel="stylesheet">
@@ -14,11 +19,11 @@
   <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">  
-      <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m0 48h17v-48h-17z"/><path d="m8.7168 16.7837c-.097 0-.193-.012-.253-.024-.012-.048-.036-.193-.036-.337 0-.963.493-1.913 1.023-2.515.674-.782 1.793-1.372 2.731-1.408.024.109.036.241.036.373 0 .951-.409 1.902-.986 2.587-.614.759-1.673 1.324-2.515 1.324m6.858 2.045c-.108.085-2.009 1.156-2.009 3.538 0 2.755 2.419 3.73 2.491 3.754-.012.06-.385 1.336-1.276 2.636-.794 1.143-1.624 2.286-2.888 2.286-1.263 0-1.588-.735-3.044-.735-1.42 0-1.925.759-3.08.759-1.156 0-1.962-1.059-2.888-2.359-1.071-1.528-1.937-3.898-1.937-6.149 0-3.609 2.346-5.523 4.656-5.523 1.228 0 2.25.807 3.02.807.735 0 1.878-.854 3.273-.854.53 0 2.431.047 3.682 1.84" fill="#fff"/></g></svg>
+        <img id="menu_logo" src="images/logo_720_720.png" alt="number3 cocktail bar viareggio logo">
       </a>
       <ul class="header__menu">
         <li><a href="">Home</a></li>
-        <li><a href="">Menu</a></li>
+        <li><a href="menu/menu_N3.pdf">Menu</a></li>
         <li><a href="#map">Dove trovarci</a></li>
         <li><a href="">Storia</a></li>
       </ul>
@@ -38,75 +43,37 @@
     </div>
 
     <div class="section scroll-section">
-        <h2 class="title">I nostri cocktail</h2>
-        <div class="container">
-            <input class="cocktail-radio" type="radio" name="cocktail-slider" id="item-1" checked="true">
-            <input class="cocktail-radio" type="radio" name="cocktail-slider" id="item-2">
-            <input class="cocktail-radio" type="radio" name="cocktail-slider" id="item-3">
-          <div class="cards">
-            <label class="card" for="item-1" id="cocktail-1">
-              <img src="images/cocktails_card.png" alt="cocktail negroni">
-            </label>
-            <label class="card" for="item-2" id="cocktail-2">
-              <img src="images/gin_card.png" alt="cocktail blue">
-            </label>
-            <label class="card" for="item-3" id="cocktail-3">
-              <img src="images/whisky_card.png" alt="cocktail gin tonic">
-            </label>
-           <!-- <label class="card" for="item-4" id="cocktail-3">
-              <img src="images/analcolici_card.png" alt="cocktail gin tonic">
-            </label>
-            <label class="card" for="item-5" id="cocktail-3">
-              <img src="images/birre_card.png" alt="cocktail gin tonic">
-            </label>
-            <label class="card" for="item-6" id="cocktail-3">
-              <img src="images/rum_card.png" alt="cocktail gin tonic">
-            </label>
-            <label class="card" for="item-7" id="cocktail-3">
-              <img src="images/caffetteria_card.png" alt="cocktail gin tonic">
-            </label> -->
-          </div>
+        <h2 class="title">Bevi qualcosa</h2>
+        <div class="carousel">
+          <ul class="carousel_drink__list">
+            <li class="carousel_drink__item" data-pos="-2">1</li>
+            <li class="carousel_drink__item" data-pos="-1">2</li>
+            <li class="carousel_drink__item" data-pos="0">3</li>
+            <li class="carousel_drink__item" data-pos="1">4</li>
+            <li class="carousel_drink__item" data-pos="2">5</li>
+          </ul>
         </div>
     </div>
 
-    <!-- TODO: add in page to add the effects on scroll-->
-    <div class="carousel">
-      <ul class="carousel__list">
-        <li class="carousel__itemfood" data-pos="-2">1</li>
-        <li class="carousel__itemfood" data-pos="-1">2</li>
-        <li class="carousel__itemfood" data-pos="0">3</li>
-        <li class="carousel__itemfood" data-pos="1">4</li>
-        <li class="carousel__itemfood" data-pos="2">5</li>
-      </ul>
-    </div>
+
 
     <div class="section scroll-section">
         <h2 class="title">Mangia qualcosa</h2>
-        <div class="container">
-            <input class="food-radio" type="radio" name="food-slider" id="food-1" checked="true">
-            <input class="food-radio" type="radio" name="food-slider" id="food-2">
-            <input class="food-radio" type="radio" name="food-slider" id="food-3">
-          <div class="cards">
-            <label class="card" for="food-1" id="food-card-1">
-              <img src="images/primi_card.png" alt="hamburger">
-            </label>
-            <label class="card" for="food-2" id="food-card-2">
-              <img src="images/secondi_card.png" alt="salad">
-            </label>
-            <label class="card" for="food-3" id="food-card-3">
-              <img src="images/insalate_card.png" alt="pasta">
-            </label>
-           <!-- <label class="card" for="food-4" id="food-card-3">
-              <img src="images/panini_card.png" alt="pasta">
-            </label>-->
-          </div>
+        <div class="carousel">
+          <ul class="carousel_food__list">
+            <li class="carousel_food__item" data-pos="-2">1</li>
+            <li class="carousel_food__item" data-pos="-1">2</li>
+            <li class="carousel_food__item" data-pos="0">3</li>
+            <li class="carousel_food__item" data-pos="1">4</li>
+            <li class="carousel_food__item" data-pos="2">5</li>
+          </ul>
         </div>
     </div>
 
     <div class="panel">
       <div class="panel-container">
-        <p class="scroll-section fade-in intro">A Viareggio</p>
-        <h2 class="scroll-section fade-in panel-title">Molto più di un semplice Bar</h2>
+        <p class="scroll-section fade-in intro">I nostri clienti ci definiscono:</p>
+        <h1 class="scroll-section fade-in panel-title">Il miglior bar di Viareggio</h1>
         <img src="images/beer.png" alt="image of beers" class="img-big-left">
       </div>
     </div>
@@ -120,16 +87,14 @@
     </div>
 
       <div class="section scroll-section" id ="final-section">
-        <h2 class="title">Vienici a trovare</h2>
-          <img src="images/position.jpg" alt="google maps screenshot" class="map-img"  id="map">
+        <h2 id="last-title" class="title">Vienici a trovare</h2>
+        <div id="map"></div>
       </div>
       <div class="final-container">
-        <h2 class="scroll-section fade-in subtitle">Indirizzo: Viale Ugo Foscolo, 3, 55049 Viareggio LU</h2>
-        <p class="scroll-section fade-in subtitle">Telefono: +39 39393393933</p>
+        <h2 class="subtitle">Indirizzo: Viale Ugo Foscolo, 3, 55049 Viareggio LU</h2>
+        <p class="subtitle">Telefono: +39 39393393933</p>
       </div>
-    <footer>
-    </footer>
-
+    
     <script src="scripts.js"></script>
 </body>
 </html>
