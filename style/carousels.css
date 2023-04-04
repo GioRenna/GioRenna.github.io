@@ -127,7 +127,7 @@
 }
   
 .carousel_food__item:nth-child(1) {
-background-image: url(../images/gin_card.png);
+background-image: url(../images/lievitati_card.jpg);
 object-fit: cover;
 background-repeat: no-repeat;
 background-size: 250px 250px;
@@ -140,7 +140,7 @@ background-repeat: no-repeat;
 background-size: 250px 250px;
 }
 .carousel_food__item:nth-child(3) {
-background-image: url(../images/panini_card.png);
+background-image: url(../images/panini_card.jpg);
 object-fit: cover;
 background-repeat: no-repeat;
 background-size: 250px 250px;
